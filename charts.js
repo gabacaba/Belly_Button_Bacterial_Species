@@ -39,13 +39,13 @@ function buildMetadata(sample) {
       var PANEL = d3.select("#sample-metadata");
   
       PANEL.html("");
-      PANEL.append("h6").text('ID '+result.id);
-      PANEL.append("h6").text('ETHNICITY '+result.ethnicity);
-      PANEL.append("h6").text('GENDER ' + result.gender);
-      PANEL.append("h6").text('AGE ' + result.age);
-      PANEL.append("h6").text('LOCATION ' + result.location);
-      PANEL.append("h6").text('BELLY BUTTON TYPE ' + result.bbtype);
-      PANEL.append("h6").text('WASHING FREQ ' + result.wfreq);
+      PANEL.append("h6").text('ID: '+result.id);
+      PANEL.append("h6").text('ETHNICITY: '+result.ethnicity);
+      PANEL.append("h6").text('GENDER: ' + result.gender);
+      PANEL.append("h6").text('AGE: ' + result.age);
+      PANEL.append("h6").text('LOCATION: ' + result.location);
+      PANEL.append("h6").text('BELLY BUTTON TYPE: ' + result.bbtype);
+      PANEL.append("h6").text('WASHING FREQ: ' + result.wfreq);
 
     });
   }
@@ -118,11 +118,17 @@ function buildCharts(sample) {
 
     // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
-      title: "<b>All Bacterial Species Found</b>",
+      title: "<b>Bacterial Species Found</b>",
       showlegend: false,
-      xaxis: {title: "OTU ID", automargin: true},
-      yaxis: {automargin: true},
-      //margin: { t: 50, r: 50, l: 50, b: 50 },
+      xaxis: {title: "OTU ID", automargin: false},
+      yaxis: {automargin: false},
+      margin: {
+        l: 50,
+        r: 50,
+        b: 100,
+        t: 100,
+        pad: 4
+      },
       hovermode: "closest"
     };
 
