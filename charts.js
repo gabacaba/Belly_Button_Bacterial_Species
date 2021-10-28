@@ -120,15 +120,9 @@ function buildCharts(sample) {
     var bubbleLayout = {
       title: "<b>Bacterial Species Found</b>",
       showlegend: false,
-      xaxis: {title: "OTU ID", automargin: false},
-      yaxis: {automargin: false},
-      margin: {
-        l: 50,
-        r: 50,
-        b: 100,
-        t: 100,
-        pad: 4
-      },
+      xaxis: {title: "OTU ID", automargin: true},
+      yaxis: {automargin: true},
+      //margin: { t: 50, r: 50, l: 50, b: 50 },
       hovermode: "closest"
     };
 
